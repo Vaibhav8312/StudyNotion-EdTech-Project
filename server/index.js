@@ -27,14 +27,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [
-      "https://study-notion-ed-tech-project-eight.vercel.app", // your Vercel frontend domain
-      "http://localhost:3000", // for local development
-    ],
-    credentials: true,
+    origin: "*", // This works for non-credentialed requests.
+    credentials: true, // This only works when a specific origin is set, not "*"
   })
 );
-
 
 app.use(
 	fileUpload({
