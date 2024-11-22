@@ -25,12 +25,13 @@ database.connect();
 // }));
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "*", // This works for non-credentialed requests.
-    credentials: true, // This only works when a specific origin is set, not "*"
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*", // This works for non-credentialed requests.
+//     credentials: true, // This only works when a specific origin is set, not "*"
+//   })
+// );
+app.use(cors());
 
 app.use(
 	fileUpload({
