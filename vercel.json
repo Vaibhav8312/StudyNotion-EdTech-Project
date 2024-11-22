@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "https://studynotion-edtech-project-1.onrender.com/api/v1"
+        }
+    ]
+}
